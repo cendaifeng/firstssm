@@ -980,7 +980,7 @@ jsp 解析后 css 的地址会变为 ``/crud/static/bootstrap-3.3.7-dist/css/boo
 
 提示：若出现 ``javax.el.PropertyNotFoundException: 类型[com.cdf.bean.Employee]上找不到属性[department]`` 错误。请为 Employee 类中添加 ``getDepartment()`` （及 ``setDepartment()`` ）方法。
 
-![image-20200819184130060](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819184130060-1598965471565.png)
+![image-20200819184130060](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819184130060.png)
 
 大功告成！
 
