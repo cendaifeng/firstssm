@@ -751,7 +751,7 @@ public class MvcTest {
 }
 ```
 
-![image-20200819163616793](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819163616793-1598965471563.png)
+![image-20200819163616793](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819163616793.png)
 
 测试成功！
 
@@ -761,7 +761,7 @@ public class MvcTest {
 
 首先，我们在 index.jsp 上直接发送 ``/emps`` 请求，由 Controller 拦截，再转发给 list.jsp 。
 
-![image-20200819192907969](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819192907969-1598965471564.png)
+![image-20200819192907969](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819192907969.png)
 
 不以 '/' 开始的**相对路径**，以当前资源的路径为基准，易出错；以 '/' 开始的相对路径，以服务器的路径为标准，会从 web 文件夹（在地址上体现为工程名）开始。所以如果直接写 ``href="/static/bootstrap...`` 则会因为找不到名为 static 的工程而丢失样式。
 
