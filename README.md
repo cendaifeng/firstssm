@@ -19,8 +19,6 @@
 
 
 
-[TOC]
-
 
 
 ## 环境配置部分
@@ -171,7 +169,7 @@
 
 在 web 目录下导入 BootStrap 和 Jquery 的静态资源
 
-![image-20200817221657219](C:/Users/Administrator/Desktop/firstssm_record.assets/image-20200817221657219.png)
+![image-20200817221657219](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200817221657219.png)
 
 在 index.jsp 页面引入
 
@@ -484,7 +482,7 @@ public class MBGTest {
 
 此时的项目文件结构为：
 
-![image-20200818163940317](C:/Users/Administrator/Desktop/firstssm_record.assets/image-20200818163940317.png)
+![image-20200818163940317](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200818163940317.png)
 
 ### 根据实际情况补充 dao 接口（Mapper 类）和映射文件 mappe.xml
 
@@ -600,7 +598,7 @@ public class MapperTest {
 
 查询数据库，结果如下：
 
-![image-20200819162533049](C:/Users/Administrator/Desktop/firstssm_record.assets/image-20200819162533049.png)
+![image-20200819162533049](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819162533049.png)
 
 完美！至此，环境配置完成。
 
@@ -753,7 +751,7 @@ public class MvcTest {
 }
 ```
 
-![image-20200819163616793](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200819163616793-1598965471563.png)
+![image-20200819163616793](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819163616793-1598965471563.png)
 
 测试成功！
 
@@ -763,7 +761,7 @@ public class MvcTest {
 
 首先，我们在 index.jsp 上直接发送 ``/emps`` 请求，由 Controller 拦截，再转发给 list.jsp 。
 
-![image-20200819192907969](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200819192907969-1598965471564.png)
+![image-20200819192907969](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819192907969-1598965471564.png)
 
 不以 '/' 开始的**相对路径**，以当前资源的路径为基准，易出错；以 '/' 开始的相对路径，以服务器的路径为标准，会从 web 文件夹（在地址上体现为工程名）开始。所以如果直接写 ``href="/static/bootstrap...`` 则会因为找不到名为 static 的工程而丢失样式。
 
@@ -877,7 +875,7 @@ jsp 解析后 css 的地址会变为 ``/crud/static/bootstrap-3.3.7-dist/css/boo
 </html>
 ```
 
-![image-20200819170434214](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200819170434214-1598965471564.png)
+![image-20200819170434214](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819170434214-1598965471564.png)
 
 好家伙，真漂亮！
 
@@ -887,7 +885,7 @@ jsp 解析后 css 的地址会变为 ``/crud/static/bootstrap-3.3.7-dist/css/boo
 
 在数据遍历和页码信息判断时，需要用到 jstl 标签库，我们将它引入： ``<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>`` 
 
-![image-20200819182824954](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200819182824954-1598965471565.png)
+![image-20200819182824954](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819182824954-1598965471565.png)
 
 在 table 中，用 ``c:forEach`` 标签遍历 pageInfo.list 取出每个员工的信息写入表内：
 
@@ -982,7 +980,7 @@ jsp 解析后 css 的地址会变为 ``/crud/static/bootstrap-3.3.7-dist/css/boo
 
 提示：若出现 ``javax.el.PropertyNotFoundException: 类型[com.cdf.bean.Employee]上找不到属性[department]`` 错误。请为 Employee 类中添加 ``getDepartment()`` （及 ``setDepartment()`` ）方法。
 
-![image-20200819184130060](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200819184130060-1598965471565.png)
+![image-20200819184130060](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819184130060-1598965471565.png)
 
 大功告成！
 
@@ -1023,7 +1021,7 @@ jsp 解析后 css 的地址会变为 ``/crud/static/bootstrap-3.3.7-dist/css/boo
 
 发送请求之后，会返回 json 数据：
 
-![image-20200819195844663](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200819195844663.png)
+![image-20200819195844663](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819195844663.png)
 
 由于在返回信息里，我们除了分页数据还想添加*状态码和提示信息* 。我们就需要新建一个 Msg 类，将分页信息也一并放入，在 Controller 中返回
 
@@ -1299,14 +1297,14 @@ public class Msg {
 </html>
 ```
 
-![image-20200819215739591](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200819215739591.png)
+![image-20200819215739591](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200819215739591.png)
 
 渲染成功，就是感觉没有原生 html 来的漂亮。
 
 这是 SpringMVC 从接收到请求到响应返回的大体流程
 
 
-![image-20200818002158769](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200818002158769-1598965471566.png)
+![image-20200818002158769](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200818002158769.png)
 
 
 
@@ -1495,7 +1493,7 @@ public class DepartmentService {
 }
 ```
 
-![image-20200822190050868](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200822190050868.png)
+![image-20200822190050868](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200822190050868.png)
 
 ### 将表单填写数据提交给服务器
 
@@ -1616,7 +1614,7 @@ totalRecord, pagesCount, itemPerPage 为此前定义的全局变量，在这里�
 
 输入错误格式，点击保存，效果如下：
 
-![image-20200822184722371](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200822184722371.png)
+![image-20200822184722371](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200822184722371.png)
 
 **编写后端代码**
 
@@ -1738,7 +1736,7 @@ totalRecord, pagesCount, itemPerPage 为此前定义的全局变量，在这里�
     }
 ```
 
-![image-20200822201627893](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200822201627893.png)
+![image-20200822201627893](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200822201627893.png)
 
 别高兴太早！要知道前端的代码是可以随便越过的，要保证数据安全，我们必须编写后端检验 (JSR303)
 
@@ -1863,7 +1861,7 @@ public class Employee {
 
 具体操作如下：
 
-<img src="C:/Users/Administrator/Desktop/firstssm_record_03.assets/image-20200822221149410.png" alt="image-20200822221149410" style="zoom:;" />
+<img src="https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200822221149410.png" alt="image-20200822221149410" style="zoom:;" />
 
 *File*下的***项目结构*** ==> ***Artifacts*** 选中当前模块的 ***lib 目录*** ==> 添加库文件，添加所有
 
@@ -1873,17 +1871,17 @@ public class Employee {
 
 回到前端，我们将保存按钮点击事件里的**数据格式校验代码**注释掉，以越过前端检验后端校验是否工作
 
-![image-20200822222045038](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200822222045038.png)
+![image-20200822222045038](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200822222045038.png)
 
-![image-20200822222209993](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200822222209993.png)
+![image-20200822222209993](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200822222209993.png)
 
 如果 ``console.log(result);`` 
 
-![image-20200822224937637](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200822224937637.png)
+![image-20200822224937637](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200822224937637.png)
 
 Server 控制台
 
-![image-20200822222233458](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200822222233458.png)
+![image-20200822222233458](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200822222233458.png)
 
 校验依然正常！新增功能编写完成！
 
@@ -2178,11 +2176,11 @@ Server 控制台
 
 如果用 **ajax 直接发送 PUT 请求**，Tomcat (本版本9.0.37) 将不会把数据封装到 map 中（只有 POST 请求它才会封装）。这样一来，SpringMVC 在封装 POJO 对象的时候，在请求域中将无法取出数据，如 request.getParamter("empName")
 
-![image-20200830174258940](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200830174258940.png)
+![image-20200830174258940](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200830174258940.png)
 
 取出来的 POJO 没有任何信息：
 
-![image-20200830160604813](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200830160604813.png)
+![image-20200830160604813](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200830160604813.png)
 
 解决方案是，在 web.xml 中配置 HttpPutFormContentFilter 过滤器
 
@@ -2203,9 +2201,9 @@ Server 控制台
 
 更改后我们再发送请求，结果如下，其他数据正常，而 *ID* 和 *员工名* 为空
 
-![image-20200831090500569](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200831090500569.png)
+![image-20200831090500569](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200831090500569.png)
 
-![image-20200831004404410](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200831004404410.png)
+![image-20200831004404410](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200831004404410.png)
 
 这是由于 *ID* 本身就不属于表单信息；员工名在表单中为静态固定文本，没有被取出来，我们的 Service 层是有选择的更新，所以也不需要员工名的数据。
 
@@ -2217,7 +2215,7 @@ Server 控制台
 public Msg updateEmp(@Valid Employee employee, BindingResult result){
 ```
 
-![image-20200831092922599](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200831092922599.png)
+![image-20200831092922599](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200831092922599.png)
 
 更新成功，且邮箱格式验证正常！
 
@@ -2384,7 +2382,7 @@ Controller 端我们将单个和多个员工的删除功能和并在一起；到
 </script>
 ```
 
-![image-20200901203100305](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200901203100305.png)
+![image-20200901203100305](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200901203100305.png)
 
 点击批量删除按钮显示隐藏的选项框
 
@@ -2446,7 +2444,7 @@ Controller 端我们将单个和多个员工的删除功能和并在一起；到
 </script>
 ```
 
-![image-20200901203223241](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200901203223241.png)
+![image-20200901203223241](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200901203223241.png)
 
 ### 再次点击批量删除发送 ajax 请求
 
@@ -2542,9 +2540,9 @@ Controller 端我们将单个和多个员工的删除功能和并在一起；到
 
 需要注意的是，无论请求成不成功，我们都将**刷新页面以还原选项框**，并且 ``return`` 退出函数来阻止末行的状态属性的设置。
 
-![image-20200901204850599](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200901204850599.png)
+![image-20200901204850599](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200901204850599.png)
 
-![image-20200901204956264](C:\Users\Administrator\Desktop\firstssm_record.assets\image-20200901204956264.png)
+![image-20200901204956264](https://github.com/cendaifeng/firstssm/blob/master/assets/image-20200901204956264.png)
 
 删除成功，且选项框还原！
 
