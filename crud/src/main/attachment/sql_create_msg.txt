@@ -1,0 +1,6 @@
+create table employee (emp_id int(11) NOT NULL auto_increment,emp_name varchar(255) not
+                    -> null, gender char(1), email varchar(255), primary key (emp_id),
+                    -> constraint `fk_emp_dept` foreign key(d_id) references department(dept_id))
+                    -> engine = InnoDB default charset = utf8;
+create table department (dept_id int(11) NOT NULL auto_increment, dept_name varchar(255)
+                        -> NOT NULL, primary key (dept_id))

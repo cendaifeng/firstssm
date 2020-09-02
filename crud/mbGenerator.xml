@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MySQLTables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!-- 去除自动生成的注释 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!-- 配置数据库连接信息 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ssm_crud?useUnicode=true&amp;characeterEncoding=utf-8&amp;serverTimezone=UTC"
+                        userId="root"
+                        password="abc123">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+        <!-- 指定 JavaBean 生成的位置 -->
+        <javaModelGenerator targetPackage="com.cdf.bean" targetProject="C:\Users\Administrator\IdeaProjects\firstSSM\crud\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+            <!-- 是否对modal添加构造函数 -->
+            <property name="constructorBased" value="true"/>
+        </javaModelGenerator>
+        <!-- 指定 sql 映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="mapper"  targetProject="C:\Users\Administrator\IdeaProjects\firstSSM\crud\src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+        <!-- 指定 dao 接口生成的位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.cdf.dao"  targetProject="C:\Users\Administrator\IdeaProjects\firstSSM\crud\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 指定每个表的生成策略 -->
+        <table tableName="employee" domainObjectName="Employee" ></table>
+        <table tableName="department" domainObjectName="Department"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="true"
+               selectByExampleQueryId="false">
+                <!-- 禁用掉一些从句语句 -->
+        </table>
+
+    </context>
+</generatorConfiguration>
